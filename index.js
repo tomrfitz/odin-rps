@@ -4,8 +4,12 @@ function getComputerChoice() {
   return choices[randomNumber];
 }
 
-function playRound() {
-  var userChoice = prompt("rock, paper, or scissors?").toLowerCase();
+function playRound(playerSelection) {
+  if (!playerSelection) {
+    var userChoice = prompt("rock, paper, or scissors?").toLowerCase();
+  } else {
+    var userChoice = playerSelection.toLowerCase();
+  }
   var computerChoice = getComputerChoice();
   console.log("User: " + userChoice);
   console.log("Computer: " + computerChoice);
@@ -38,7 +42,7 @@ function game() {
   let userWin = 0;
   let computerWin = 0;
   let tie = 0;
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i++; ) {
     result = playRound();
     console.log(result);
     if (result === "User wins!") {
@@ -54,4 +58,10 @@ function game() {
   console.log("Ties: " + tie);
 }
 
-game();
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach((button) => {
+  button.addEventListener("click", function () {
+    playRound(button.id);
+  });
+});

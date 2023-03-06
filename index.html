@@ -7,6 +7,39 @@
     <title>Document</title>
   </head>
   <body>
-    <script type="text/javascript" src="index.js"></script>
+    <h1>Rock Paper Scissors</h1>
+    <p>Choose your weapon and play against the computer!</p>
+    <button class="choice" id="rock">Rock</button>
+    <button class="choice" id="paper">Paper</button>
+    <button class="choice" id="scissors">Scissors</button>
+
+    <div id="results">
+      <h2>Results</h2>
+      <p id="result"><a id="recentWinner"></a> wins!</p>
+      <p>Player: <a id="playerChoice"></a></p>
+      <p>Computer: <a id="computerChoice"></a></p>
+    </div>
+    <div class="scoretable">
+      <table>
+        <caption>
+          Scoretable
+        </caption>
+        <tr>
+          <th>Game</th>
+          <th>Winner</th>
+          <th>Player</th>
+          <th>Computer</th>
+          <th>Tie</th>
+        </tr>
+        <tr>
+          <td id="gameID"></td>
+          <td id="winner"></td>
+          <td id="playerWins"></td>
+          <td id="computerWins"></td>
+          <td id="tie"></td>
+        </tr>
+      </table>
+    </div>
   </body>
+  <script type="text/javascript" src="index.js"></script>
 </html>
