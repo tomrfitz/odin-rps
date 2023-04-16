@@ -14,8 +14,8 @@ function playRound(playerSelection) {
   var playerPlay = document.getElementById("playerChoice");
   var computerPlay = document.getElementById("computerChoice");
 
-  playerPlay.textContent = userChoice;
-  computerPlay.textContent = computerChoice;
+  playerPlay.textContent = "Player played: " + userChoice;
+  computerPlay.textContent = "Computer played: " + computerChoice;
   console.log("User: " + userChoice);
   console.log("Computer: " + computerChoice);
   if (userChoice === computerChoice) {
@@ -72,11 +72,11 @@ function game(id) {
   computerCell.innerHTML = computerWin;
   tieCell.innerHTML = tie;
 
-  gameNumber++;
   console.log("Game number: " + gameNumber);
   console.log("User wins: " + userWin);
   console.log("Computer wins: " + computerWin);
   console.log("Ties: " + tie);
+  gameNumber++;
 }
 
 let userWin = 0;

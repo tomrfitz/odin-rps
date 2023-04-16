@@ -5,20 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <h1>Rock Paper Scissors</h1>
-    <p>Choose your tool and play against the computer!</p>
-    <p>Refresh the page to reset your scores.</p>
-    <button class="choice" id="rock">Rock</button>
-    <button class="choice" id="paper">Paper</button>
-    <button class="choice" id="scissors">Scissors</button>
+    <div id="header">
+      <div id="text">
+        <h1>Rock Paper Scissors</h1>
+        <p>Choose your tool and play against the computer!</p>
+        <p>Refresh the page to reset your scores.</p>
+      </div>
+      <img src="humansvscomputers-3d-300.png" alt="human vs computer" />
+    </div>
+    <div id="buttons">
+      <button class="choice" id="rock">Rock</button>
+      <button class="choice" id="paper">Paper</button>
+      <button class="choice" id="scissors">Scissors</button>
+    </div>
 
     <div id="results">
       <h2>Results</h2>
       <p id="recentWinner"></p>
-      <p>Player played: <a id="playerChoice"></a>.</p>
-      <p>Computer played: <a id="computerChoice"></a>.</p>
+      <p id="playerChoice"></p>
+      <p id="computerChoice"></p>
     </div>
     <div class="scoretable">
       <table id="scoretable">
@@ -26,9 +34,9 @@
           Scoretable
         </caption>
         <tr>
-          <th>Game</th>
-          <th>Winner</th>
-          <th>Total Player Wins</th>
+          <th>Game |</th>
+          <th>Winner |</th>
+          <th>Total Player Wins |</th>
           <th>Total Computer Wins</th>
           <th>Ties</th>
         </tr>
