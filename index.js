@@ -58,15 +58,15 @@ function game(id) {
   if (result === "User wins!") {
     userWin++;
     winnerCell.innerHTML = "User";
-    recentWinner.innerHTML = "User";
+    recentWinner.innerHTML = "User wins! :D";
   } else if (result === "Computer wins!") {
     computerWin++;
     winnerCell.innerHTML = "Computer";
-    recentWinner.innerHTML = "Computer";
+    recentWinner.innerHTML = "Computer wins! :(";
   } else {
     tie++;
     winnerCell.innerHTML = "Tie";
-    recentWinner.innerHTML = "Tie";
+    recentWinner.innerHTML = "Tie! :O";
   }
   userCell.innerHTML = userWin;
   computerCell.innerHTML = computerWin;
