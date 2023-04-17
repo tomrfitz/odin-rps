@@ -1,0 +1,27 @@
+{
+  "display": "Node 16 + Strictest",
+  "compilerOptions": {
+    "lib": ["es2021", "dom"],
+    "module": "ES2015",
+    "target": "es2021",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "checkJs": true,
+    // Everything below are custom changes for this app
+    "allowJs": true,
+    "outDir": "dist"
+  },
+  "include": ["./**/*", "./__tests__/**/*"]
+}
