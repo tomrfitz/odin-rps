@@ -1,3 +1,5 @@
+export {};
+
 let userWin = 0;
 let computerWin = 0;
 let tie = 0;
@@ -16,13 +18,18 @@ function playRound(playerSelection) {
   // the function should take one parameter - the playerSelection
   // and then returns a result and displays the selections of both players
   if (!playerSelection) {
-    var userChoice = prompt("rock, paper, or scissors?").toLowerCase();
+    var userChoice = prompt(
+      "rock, paper, or scissors?"
+    ).toLowerCase() as string;
+    if (userChoice === null) {
+      alert("You must enter rock, paper, or scissors to play!");
+    }
   } else {
-    var userChoice = playerSelection.toLowerCase();
+    var userChoice = playerSelection.toLowerCase() as string;
   }
   var computerChoice = getComputerChoice();
-  var playerPlay = document.getElementById("playerChoice");
-  var computerPlay = document.getElementById("computerChoice");
+  var playerPlay = document.getElementById("playerChoice") as HTMLElement;
+  var computerPlay = document.getElementById("computerChoice") as HTMLElement;
 
   playerPlay.textContent = "Player played: " + userChoice;
   computerPlay.textContent = "Computer played: " + computerChoice;
@@ -57,19 +64,19 @@ function game(id) {
   // this function contains the logic for playing RPS and recording scores
   // this function takes the id of the button, Rock, Paper, or Scissors, and passes it to playRound
 
-  result = playRound(id); // plays one round of RPS
+  var result = playRound(id); // plays one round of RPS
   console.log(result);
 
   // this section updates the score table
-  var scoretable = document.getElementById("scoretable");
+  var scoretable = document.getElementById("scoretable") as HTMLTableElement;
   var row = scoretable.insertRow(gameNumber); // inserts new row at bottom of table
   var gameCell = row.insertCell(0); // inserts a cell for the game number, ie 8th game played
-  gameCell.innerHTML = gameNumber;
+  gameCell.innerHTML = gameNumber.toString();
   var winnerCell = row.insertCell(1);
   var userCell = row.insertCell(2);
   var computerCell = row.insertCell(3);
   var tieCell = row.insertCell(4);
-  var recentWinner = document.getElementById("recentWinner");
+  var recentWinner = document.getElementById("recentWinner") as HTMLElement;
   if (result === "User wins!") {
     userWin++;
     winnerCell.innerHTML = "User";
@@ -83,9 +90,9 @@ function game(id) {
     winnerCell.innerHTML = "Tie";
     recentWinner.innerHTML = "Tie! :O";
   }
-  userCell.innerHTML = userWin;
-  computerCell.innerHTML = computerWin;
-  tieCell.innerHTML = tie;
+  userCell.innerHTML = userWin.toString();
+  computerCell.innerHTML = computerWin.toString();
+  tieCell.innerHTML = tie.toString();
 
   console.log("Game number: " + gameNumber);
   console.log("User wins: " + userWin);

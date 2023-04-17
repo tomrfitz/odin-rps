@@ -7,6 +7,10 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
+    "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@types/node": "^18.15.11"
   }
 }
