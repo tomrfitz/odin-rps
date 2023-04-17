@@ -15,11 +15,13 @@ body {
     justify-content: space-evenly;
 }
 
-#header .img {
+#header img {
     float: right;
+    height: 200px;
+    width: auto;
 }
 
-#header .h1 .p {
+#header h1 p {
     clear: both;
 }
 
