@@ -1,0 +1,12 @@
+{
+  "name": "odin-rps",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "repository": "https://github.com/tomrfitz/odin-rps.git",
+  "author": "Thomas FitzGerald <tomrfitz@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  }
+}
