@@ -13,19 +13,15 @@ function getComputerChoice() {
   return choices[randomNumber];
 }
 
-function playRound(playerSelection) {
+function playRound(playerSelection: string) {
   // this function contains the logic for a single round of Rock Paper Scissors
   // the function should take one parameter - the playerSelection
   // and then returns a result and displays the selections of both players
-  if (!playerSelection) {
-    var userChoice = prompt(
-      "rock, paper, or scissors?"
-    ).toLowerCase() as string;
-    if (userChoice === null) {
-      alert("You must enter rock, paper, or scissors to play!");
-    }
-  } else {
-    var userChoice = playerSelection.toLowerCase() as string;
+  var userChoice =
+    playerSelection?.toLowerCase() ??
+    prompt("rock, paper, or scissors?")?.toLowerCase();
+  if (!userChoice) {
+    alert("You must enter rock, paper, or scissors to play!");
   }
   var computerChoice = getComputerChoice();
   var playerPlay = document.getElementById("playerChoice") as HTMLElement;
@@ -57,10 +53,11 @@ function playRound(playerSelection) {
     }
   } else {
     console.log("Error!");
+    return "Error!";
   }
 }
 
-function game(id) {
+function game(id: string) {
   // this function contains the logic for playing RPS and recording scores
   // this function takes the id of the button, Rock, Paper, or Scissors, and passes it to playRound
 

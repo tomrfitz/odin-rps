@@ -1,7 +1,7 @@
 {
   "display": "Node 16 + Strictest",
   "compilerOptions": {
-    "lib": ["es2021"],
+    "lib": ["es2021", "dom"],
     "module": "commonjs",
     "target": "es2021",
     "strict": true,
@@ -18,7 +18,6 @@
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "importsNotUsedAsValues": "error",
     "checkJs": true,
     // Everything below are custom changes for this app
     "allowJs": true,
