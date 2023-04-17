@@ -1,5 +1,3 @@
-export {};
-
 let userWin = 0;
 let computerWin = 0;
 let tie = 0;

@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 let userWin = 0;
 let computerWin = 0;
 let tie = 0;
