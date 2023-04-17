@@ -5,6 +5,9 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection) {
+  // this function contains the logic for a single round of Rock Paper Scissors
+  // the function should take one parameter - the playerSelection
+  // and then returns a result and displays the selections of both players
   if (!playerSelection) {
     var userChoice = prompt("rock, paper, or scissors?").toLowerCase();
   } else {
@@ -44,11 +47,16 @@ function playRound(playerSelection) {
 }
 
 function game(id) {
-  result = playRound(id);
+  // this function contains the logic for playing RPS and recording scores
+  // this function takes the id of the button, Rock, Paper, or Scissors, and passes it to playRound
+
+  result = playRound(id); // plays one round of RPS
   console.log(result);
+
+  // this section updates the score table
   var scoretable = document.getElementById("scoretable");
-  var row = scoretable.insertRow(gameNumber);
-  var gameCell = row.insertCell(0);
+  var row = scoretable.insertRow(gameNumber); // inserts new row at bottom of table
+  var gameCell = row.insertCell(0); // inserts a cell for the game number, ie 8th game played
   gameCell.innerHTML = gameNumber;
   var winnerCell = row.insertCell(1);
   var userCell = row.insertCell(2);
@@ -82,7 +90,7 @@ function game(id) {
 let userWin = 0;
 let computerWin = 0;
 let tie = 0;
-let gameNumber = 1;
+let gameNumber = 1; // user would count from 1, also keeps header stationary at row 0
 
 const buttons = document.querySelectorAll("button");
 
