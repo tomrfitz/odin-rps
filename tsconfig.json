@@ -23,5 +23,5 @@
     "allowJs": true,
     "outDir": "dist"
   },
-  "include": ["docs/**/*", "./__tests__/**/*"]
+  "include": ["./**/*", "./__tests__/**/*"]
 }
